@@ -26,15 +26,15 @@ done
 
 if [ "$1" == "web" ]; then
   if [ -f /concourse-keys/github_auth_client_secret ]; then
-    CONCOURSE_GITHUB_AUTH_CLIENT_SECRET="$(cat concourse-keys/github_auth_client_secret)"
+    CONCOURSE_GITHUB_CLIENT_SECRET="$(cat concourse-keys/concourse_github_client_secret)"
     log "setting concourse github auth client secret"
-    export CONCOURSE_GITHUB_AUTH_CLIENT_SECRET
+    export CONCOURSE_GITHUB_CLIENT_SECRET
   fi
 
-  if [ -f /concourse-keys/basic_auth_password ]; then
-    CONCOURSE_BASIC_AUTH_PASSWORD="$(cat concourse-keys/github_auth_client_secret)"
-    log "setting concourse basic auth password"
-    export CONCOURSE_BASIC_AUTH_PASSWORD
+  if [ -f /concourse-keys/concourse_add_local_user ]; then
+    CONCOURSE_ADD_LOCAL_USER="$(cat concourse-keys/concourse_add_local_user)"
+    log "setting concourse basic auth bcrypted user/password combinations"
+    export CONCOURSE_ADD_LOCAL_USER
   fi
 fi
 

@@ -33,8 +33,8 @@ if [ "$CONCOURSE_COMPONENT" == "web" ]; then
   decrypt "$authorized_worker_keys" authorized_worker_keys
 
   # secrets for the daemon
-  decrypt "$github_auth_client_secret" github_auth_client_secret
-  decrypt "$basic_auth_password" basic_auth_password
+  decrypt "$concourse_github_client_secret" concourse_github_client_secret
+  decrypt "$concourse_add_local_user" concourse_add_local_user
 
 elif [ "$CONCOURSE_COMPONENT" == "worker" ]; then
   log "decrypting keys for worker"
