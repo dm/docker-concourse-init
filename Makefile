@@ -1,6 +1,6 @@
 CONTAINER_NAME = docker-concourse-init
 NAME = dmacedo/docker-concourse-init
-VERSION = 4.0
+VERSION = 4.1
 
 .PHONY: all build test tag_latest release ssh
 

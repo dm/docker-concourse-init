@@ -25,7 +25,7 @@ for i in {1..5}; do
 done
 
 if [ "$1" == "web" ]; then
-  if [ -f /concourse-keys/github_auth_client_secret ]; then
+  if [ -f /concourse-keys/concourse_github_client_secret ]; then
     CONCOURSE_GITHUB_CLIENT_SECRET="$(cat concourse-keys/concourse_github_client_secret)"
     log "setting concourse github auth client secret"
     export CONCOURSE_GITHUB_CLIENT_SECRET
